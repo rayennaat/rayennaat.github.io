@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import { useTheme } from "../context/ThemeContext";
 
 const navLinks = [
-  { label: "Hero",       href: "#hero"       },
-  { label: "About",      href: "#about"      },
-  { label: "Sponsors",   href: "#sponsors"   },
+  { label: "Hero", href: "#hero" },
+  { label: "About", href: "#about" },
+  { label: "Sponsors", href: "#sponsors" },
   { label: "Categories", href: "#categories" },
 ];
+
 
 const socials = [
   {
     name: "Discord",
-    href: "https://discord.gg/gdWPDEWb",
+    href: "https://discord.gg/",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.001.022.013.043.031.056a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
@@ -46,7 +47,6 @@ const socials = [
     ),
   },
 ];
-
 function handleNav(e, href) {
   e.preventDefault();
   const el = document.querySelector(href);
@@ -54,6 +54,8 @@ function handleNav(e, href) {
 }
 
 export default function Footer() {
+  const { logo, primary, primaryRgb } = useTheme();  // ✔ VALID
+
   const [year] = useState(new Date().getFullYear());
   const [topVisible, setTopVisible] = useState(false);
 
@@ -62,60 +64,45 @@ export default function Footer() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
   return (
     <footer className="relative bg-black overflow-hidden">
-      {/* Top border glow */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff41]/50 to-transparent" />
-
-      {/* Background grid */}
+      <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(to right, transparent, rgba(${primaryRgb},0.5), transparent)` }} />
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.025]"
         style={{
-          backgroundImage:
-            "linear-gradient(#00ff41 1px, transparent 1px), linear-gradient(90deg, #00ff41 1px, transparent 1px)",
+          backgroundImage: `linear-gradient(${primary} 1px, transparent 1px), linear-gradient(90deg, ${primary} 1px, transparent 1px)`,
           backgroundSize: "40px 40px",
         }}
       />
 
-      {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 mb-16">
 
-          {/* Col 1 — Branding */}
           <div className="flex flex-col gap-6">
-            <a
-  href="#hero"
-  onClick={(e) => handleNav(e, "#hero")}
-  className="flex items-center gap-3 group w-fit"
->
-  <img
-    src={logo}
-    alt="logo"
-    className="w-15 h-15 object-contain transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_6px_#00ff41]"
-  />
-
-  <div className="flex flex-col leading-none">
-    <span className="text-white font-black text-xl tracking-widest uppercase">
-      Riddler
-    </span>
-    <span className="text-[#00ff41] text-xs tracking-[0.35em] uppercase font-mono">
-      CTF · {year}
-    </span>
-  </div>
-</a>
+            <a href="#hero" onClick={(e) => handleNav(e, "#hero")} className="flex items-center gap-3 group w-fit">
+              <img
+                src={logo}
+                alt="logo"
+                className="w-15 h-15 object-contain transition-all duration-300 group-hover:scale-105"
+                style={{ filter: `drop-shadow(0 0 6px ${primary})` }}
+              />
+              <div className="flex flex-col leading-none">
+                <span className="text-white font-black text-xl tracking-widest uppercase">Securinets ISGT</span>
+                <span className="text-xs tracking-[0.35em] uppercase font-mono" style={{ color: primary }}>CTF · {year}</span>
+              </div>
+            </a>
             <p className="font-mono text-gray-600 text-sm leading-relaxed max-w-xs">
               A Capture-The-Flag competition built around the mind of Gotham's most dangerous puzzle-maker.
             </p>
-
-            {/* Social links */}
             <div className="flex items-center gap-3">
               {socials.map((s) => (
                 <a
                   key={s.name}
                   href={s.href}
                   aria-label={s.name}
-                  className="w-9 h-9 flex items-center justify-center border border-white/10 text-gray-600 hover:text-[#00ff41] hover:border-[#00ff41]/50 hover:shadow-[0_0_12px_rgba(0,255,65,0.2)] transition-all duration-300"
+                  className="w-9 h-9 flex items-center justify-center border border-white/10 text-gray-600 transition-all duration-300"
+                  onMouseEnter={e => { e.currentTarget.style.color = primary; e.currentTarget.style.borderColor = `rgba(${primaryRgb},0.5)`; e.currentTarget.style.boxShadow = `0 0 12px rgba(${primaryRgb},0.2)`; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = ""; e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; e.currentTarget.style.boxShadow = "none"; }}
                 >
                   {s.icon}
                 </a>
@@ -123,20 +110,19 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 — Quick links */}
           <div className="flex flex-col gap-5">
-            <h4 className="font-mono text-[#00ff41] text-xs tracking-[0.35em] uppercase">
-              Navigate
-            </h4>
+            <h4 className="font-mono text-xs tracking-[0.35em] uppercase" style={{ color: primary }}>Navigate</h4>
             <ul className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
                     onClick={(e) => handleNav(e, link.href)}
-                    className="group flex items-center gap-2 font-mono text-sm text-gray-500 hover:text-[#00ff41] transition-colors duration-300 uppercase tracking-widest"
+                    className="group flex items-center gap-2 font-mono text-sm text-gray-500 transition-colors duration-300 uppercase tracking-widest"
+                    onMouseEnter={e => e.currentTarget.style.color = primary}
+                    onMouseLeave={e => e.currentTarget.style.color = ""}
                   >
-                    <span className="w-0 h-px bg-[#00ff41] group-hover:w-4 transition-all duration-300" />
+                    <span className="w-0 h-px transition-all duration-300 group-hover:w-4" style={{ background: primary }} />
                     {link.label}
                   </a>
                 </li>
@@ -144,77 +130,60 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 — Contact */}
           <div className="flex flex-col gap-5">
-            <h4 className="font-mono text-[#00ff41] text-xs tracking-[0.35em] uppercase">
-              Contact Us
-            </h4>
+            <h4 className="font-mono text-xs tracking-[0.35em] uppercase" style={{ color: primary }}>Contact Us</h4>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
-                <span className="text-[#00ff41] mt-0.5 text-lg">✉</span>
+                <span className="mt-0.5 text-lg" style={{ color: primary }}>✉</span>
                 <div>
                   <p className="font-mono text-xs text-gray-600 uppercase tracking-widest mb-0.5">Email</p>
-                  <a
-                    href="mailto:contact@riddlerctf.com"
-                    target="_blank"
-                    className="font-mono text-sm text-gray-400 hover:text-[#00ff41] transition-colors duration-300"
-                  >
+                  <a href="mailto:contact@riddlerctf.com" target="_blank" className="font-mono text-sm text-gray-400 transition-colors duration-300" onMouseEnter={e => e.currentTarget.style.color = primary} onMouseLeave={e => e.currentTarget.style.color = ""}>
                     securinetsisgtunis@gmail.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#00ff41] mt-0.5 text-lg">💬</span>
+                <span className="mt-0.5 text-lg" style={{ color: primary }}>💬</span>
                 <div>
                   <p className="font-mono text-xs text-gray-600 uppercase tracking-widest mb-0.5">Discord</p>
-                  <a
-                    href="https://discord.gg/gdWPDEWb"
-                    target="_blank"
-                    className="font-mono text-sm text-gray-400 hover:text-[#00ff41] transition-colors duration-300"
-                  >
+                  <a href="https://discord.gg/gdWPDEWb" target="_blank" className="font-mono text-sm text-gray-400 transition-colors duration-300" onMouseEnter={e => e.currentTarget.style.color = primary} onMouseLeave={e => e.currentTarget.style.color = ""}>
                     https://discord.gg/gdWPDEWb
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#00ff41] mt-0.5 text-lg">📍</span>
+                <span className="mt-0.5 text-lg" style={{ color: primary }}>📍</span>
                 <div>
                   <p className="font-mono text-xs text-gray-600 uppercase tracking-widest mb-0.5">Location</p>
-                  <span className="font-mono text-sm text-gray-400">
-                    On-site · ISGT Tunis
-                  </span>
+                  <span className="font-mono text-sm text-gray-400">On-site · ISGT Tunis</span>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8" />
+        <div className="w-full h-px bg-white/10 mb-8" />
 
-        {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-mono text-gray-700 text-xs tracking-wider">
-            © {year} Riddler CTF · All riddles reserved.
-          </p>
+          <p className="font-mono text-gray-700 text-xs tracking-wider">© {year} Riddler CTF · All riddles reserved.</p>
           <p className="font-mono text-gray-700 text-xs tracking-wider text-center">
-            <span className="text-[#00ff41] opacity-60">?</span>
+            <span className="opacity-60" style={{ color: primary }}>?</span>
             {" "}Built with chaos, caffeine, and ciphers.{" "}
-            <span className="text-[#00ff41] opacity-60">?</span>
+            <span className="opacity-60" style={{ color: primary }}>?</span>
           </p>
           <p className="font-mono text-gray-700 text-xs tracking-wider">
             Inspired by{" "}
-            <span className="text-[#00ff41] opacity-60">The Batman · 2022</span>
+            <span className="opacity-60" style={{ color: primary }}>The Batman · 2022</span>
           </p>
         </div>
       </div>
 
-      {/* Back to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-8 right-8 w-10 h-10 border border-[#00ff41]/40 flex items-center justify-center text-[#00ff41] hover:bg-[#00ff41] hover:text-black hover:shadow-[0_0_20px_rgba(0,255,65,0.5)] transition-all duration-300 z-50 ${
-          topVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-        }`}
+        className={`fixed bottom-8 right-8 w-10 h-10 flex items-center justify-center transition-all duration-300 z-50 ${topVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+        style={{ border: `1px solid rgba(${primaryRgb},0.4)`, color: primary }}
+        onMouseEnter={e => { e.currentTarget.style.background = primary; e.currentTarget.style.color = "black"; e.currentTarget.style.boxShadow = `0 0 20px rgba(${primaryRgb},0.5)`; }}
+        onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = primary; e.currentTarget.style.boxShadow = "none"; }}
         aria-label="Back to top"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">

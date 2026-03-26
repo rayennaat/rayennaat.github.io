@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import { useTheme } from "../context/ThemeContext";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -8,8 +8,14 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+
+  // ✔ HOOKS MUST BE CALLED INSIDE THE COMPONENT
+  const { logo, isBatman, setTheme, primary, primaryFaint, primaryGlow, primaryHalf } = useTheme();
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
+  const [joinHovered, setJoinHovered] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -24,16 +30,22 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const navStyle = scrolled
+    ? {
+        backgroundColor: "rgba(0,0,0,0.9)",
+        backdropFilter: "blur(12px)",
+        borderBottom: `1px solid ${primaryFaint}`,
+        boxShadow: `0 0 30px ${primaryGlow}`,
+      }
+    : {};
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-black/90 backdrop-blur-md border-b border-[#00ff41]/20 shadow-[0_0_30px_rgba(0,255,65,0.08)]"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      style={navStyle}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+
         <a
           href="#hero"
           onClick={(e) => handleNav(e, "#hero")}
@@ -42,59 +54,95 @@ export default function Navbar() {
           <img
             src={logo}
             alt="logo"
-            className="w-20 h-15 object-contain transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_6px_#00ff41]"
-            />
+            className="w-20 object-contain transition-all duration-300 group-hover:scale-105"
+            style={{ filter: `drop-shadow(0 0 6px ${primary})` }}
+          />
           <div className="flex flex-col leading-none">
             <span className="text-white font-black text-base tracking-widest uppercase">
               SECURINETS ISGT
             </span>
-            <span className="text-[#00ff41] text-xs tracking-[0.3em] uppercase font-mono">
+            <span
+              className="text-xs tracking-[0.3em] uppercase font-mono transition-colors duration-500"
+              style={{ color: primary }}
+            >
               CTF
             </span>
           </div>
         </a>
 
-        {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
                 onClick={(e) => handleNav(e, link.href)}
-                className="relative text-gray-400 hover:text-[#00ff41] font-mono text-sm uppercase tracking-widest transition-colors duration-300 group"
+                onMouseEnter={() => setHoveredLink(link.label)}
+                onMouseLeave={() => setHoveredLink(null)}
+                className="relative font-mono text-sm uppercase tracking-widest transition-colors duration-300"
+                style={{ color: hoveredLink === link.label ? primary : "#9ca3af" }}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#00ff41] group-hover:w-full transition-all duration-300 shadow-[0_0_6px_#00ff41]" />
+                <span
+                  className="absolute -bottom-1 left-0 h-px transition-all duration-300"
+                  style={{
+                    width: hoveredLink === link.label ? "100%" : "0%",
+                    backgroundColor: primary,
+                    boxShadow: `0 0 6px ${primary}`,
+                  }}
+                />
               </a>
             </li>
           ))}
+
           <li>
             <a
               href="#categories"
               onClick={(e) => handleNav(e, "#categories")}
-              className="px-5 py-2 border border-[#00ff41] text-[#00ff41] font-mono text-sm uppercase tracking-widest hover:bg-[#00ff41] hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,65,0.5)]"
+              onMouseEnter={() => setJoinHovered(true)}
+              onMouseLeave={() => setJoinHovered(false)}
+              className="px-5 py-2 font-mono text-sm uppercase tracking-widest transition-all duration-300"
+              style={{
+                border: `1px solid ${primary}`,
+                color: joinHovered ? "black" : primary,
+                backgroundColor: joinHovered ? primary : "transparent",
+                boxShadow: joinHovered ? `0 0 20px ${primaryHalf}` : "none",
+              }}
             >
               Join Now
             </a>
           </li>
+
+          <li>
+            <button
+              onClick={() => setTheme(isBatman ? "riddler" : "batman")}
+              className="px-4 py-2 font-mono text-xs uppercase tracking-widest transition-all duration-300 rounded-sm"
+              style={{
+                border: `1px solid ${primary}`,
+                color: primary,
+                boxShadow: `0 0 10px ${primaryFaint}`,
+              }}
+            >
+              {isBatman ? "Riddler" : "Batman"}
+            </button>
+          </li>
         </ul>
 
-        {/* Mobile Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2 group"
+          className="md:hidden flex flex-col gap-1.5 p-2"
         >
-          <span className={`w-6 h-0.5 bg-[#00ff41] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`w-6 h-0.5 bg-[#00ff41] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`w-6 h-0.5 bg-[#00ff41] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className="w-6 h-0.5 transition-all duration-300" style={{ backgroundColor: primary, transform: menuOpen ? "rotate(45deg) translateY(8px)" : "none" }} />
+          <span className="w-6 h-0.5 transition-all duration-300" style={{ backgroundColor: primary, opacity: menuOpen ? 0 : 1 }} />
+          <span className="w-6 h-0.5 transition-all duration-300" style={{ backgroundColor: primary, transform: menuOpen ? "rotate(-45deg) translateY(-8px)" : "none" }} />
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-400 overflow-hidden ${
-          menuOpen ? "max-h-64 border-t border-[#00ff41]/20" : "max-h-0"
-        } bg-black/95 backdrop-blur-md`}
+        className="md:hidden overflow-hidden transition-all duration-300 bg-black/95 backdrop-blur-md"
+        style={{
+          maxHeight: menuOpen ? "300px" : "0px",
+          borderTop: menuOpen ? `1px solid ${primaryFaint}` : "none",
+        }}
       >
         <ul className="flex flex-col px-6 py-4 gap-4">
           {navLinks.map((link) => (
@@ -102,7 +150,8 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={(e) => handleNav(e, link.href)}
-                className="text-gray-400 hover:text-[#00ff41] font-mono text-sm uppercase tracking-widest transition-colors duration-300"
+                className="font-mono text-sm uppercase tracking-widest"
+                style={{ color: "#9ca3af" }}
               >
                 {link.label}
               </a>
@@ -112,10 +161,20 @@ export default function Navbar() {
             <a
               href="#categories"
               onClick={(e) => handleNav(e, "#categories")}
-              className="inline-block px-5 py-2 border border-[#00ff41] text-[#00ff41] font-mono text-sm uppercase tracking-widest hover:bg-[#00ff41] hover:text-black transition-all duration-300"
+              className="inline-block px-5 py-2 font-mono text-sm uppercase tracking-widest transition-all duration-300"
+              style={{ border: `1px solid ${primary}`, color: primary }}
             >
               Join Now
             </a>
+          </li>
+          <li>
+            <button
+              onClick={() => setTheme(isBatman ? "riddler" : "batman")}
+              className="px-4 py-2 font-mono text-xs uppercase tracking-widest transition-all duration-300"
+              style={{ border: `1px solid ${primary}`, color: primary }}
+            >
+              {isBatman ? "Riddler" : "Batman"}
+            </button>
           </li>
         </ul>
       </div>

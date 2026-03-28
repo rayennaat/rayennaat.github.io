@@ -146,8 +146,8 @@ export default function Footer() {
                 <span className="mt-0.5 text-lg" style={{ color: primary }}>💬</span>
                 <div>
                   <p className="font-mono text-xs text-gray-600 uppercase tracking-widest mb-0.5">Discord</p>
-                  <a href="https://discord.gg/gdWPDEWb" target="_blank" className="font-mono text-sm text-gray-400 transition-colors duration-300" onMouseEnter={e => e.currentTarget.style.color = primary} onMouseLeave={e => e.currentTarget.style.color = ""}>
-                    https://discord.gg/gdWPDEWb
+                  <a href="https://discord.gg/" target="_blank" className="font-mono text-sm text-gray-400 transition-colors duration-300" onMouseEnter={e => e.currentTarget.style.color = primary} onMouseLeave={e => e.currentTarget.style.color = ""}>
+                    https://discord.gg/
                   </a>
                 </div>
               </li>

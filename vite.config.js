@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: "/rayennaat.github.io/",   // <-- MUST MATCH EXACT REPO NAME
+  base: "/",   // <-- MUST MATCH EXACT REPO NAME
 
   plugins: [
     react(),

@@ -150,7 +150,7 @@ export default function About() {
             >
               <div className="flex flex-col gap-1">
                 <span className="font-mono text-xs tracking-widest uppercase" style={{ color: primary }}>Event Date</span>
-                <span className="text-white font-black uppercase text-xl" style={{ fontFamily: "'Impact', sans-serif" }}>04.04.2026</span>
+                <span className="text-white font-black uppercase text-xl" style={{ fontFamily: "'Impact', sans-serif" }}>18.04.2026</span>
               </div>
               <div className="h-10 w-px bg-white/10 hidden sm:block" />
               <div className="flex flex-col gap-1">
@@ -160,7 +160,7 @@ export default function About() {
               <div className="h-10 w-px bg-white/10 hidden sm:block" />
               <div className="flex flex-col gap-1">
                 <span className="font-mono text-xs tracking-widest uppercase" style={{ color: primary }}>Team Size</span>
-                <span className="text-white font-mono text-sm">4 members</span>
+                <span className="text-white font-mono text-sm">3 members</span>
               </div>
             </div>
           </div>

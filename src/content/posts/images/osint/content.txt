@@ -1,0 +1,51 @@
+1st task 
+
+3 VILLIANS
+
+<pic1>
+The key to solving this challenge is the phrase "796th floor" googling it leads straight to floor796.com, a giant pixel art depiction of life on the 796th floor of a space station, loaded with pop culture references.
+<pic2>
+You just scroll and explore the map with your mouse until you stumble upon a Batcave-styled zone featuring a band called BATMETAL performing on stage
+<pic3>
+ an alternate-universe Batman fronting alongside three classic villains from his universe: Riddler, Penguin, and Bane. That gives you the flag: securinetsisgt{riddler_penguin_bane}.
+ 
+2nd task 
+
+Operation Defuse 
+
+<pic4>
+Looking at the image, three landmarks immediately stand out as anchors. In the top-left on a hilltop, there's a cathedral, Tunisia doesn't have many of those, and combined with the mountains visible in the background (recognizable as Bou Kornine), this firmly places the scene in the Tunis / Carthage area. The cathedral is the Cathedral of Carthage.
+<pic5>
+Now you gotta figure out where the pic was actually taken from. You can see the photo is shot from a high floor, there's a big green garden/park below, palm-tree-lined roads, and a mosque with a tall minaret clearly visible. So you just start searching for mosques in that zone on Google Maps and going through them one by one until you land on Essalem Mosque which has a garden right next to it, matching perfectly what's in the image.
+<pic6>
+From there you just look at the road across from the mosque and the garden, and you find the building the photo was taken from the Concentrix call center. Look at it on Street View, check the angle, it all lines up.
+<pic7>
+Flag:
+securinetsisgt{36.848_10.298}
+
+
+3rd task
+
+CA
+
+<pic8>
+<pic9>
+The attached file shows a blurred image with a phone in the foreground. On the phone, there is a note containing the word Tunis and the three-word clue:
+
+energetic.export.jotting
+
+The format of the clue points to what3words, so the three words were searched there. The same three-word combination can point to multiple places, but the note also says Tunis, which makes the Tunis result the correct one.
+
+Opening that location leads to a football field in Tunis. The field belongs to the Club Africain training complex. Near the field, there is a small structure with a red roof, which matches the description in the challenge.
+
+<pic11>
+
+The challenge mentions that the roof changed over time, so the location was checked using Google Earth Pro historical imagery. Going back through the timeline shows that the roof was not always the same. In one historical image, the roof appears red with large white letters painted on it.
+
+The first clear match appears in 06/2010. The location is in Tunisia, in the city of Tunis.
+
+<pic10>
+
+Final flag:
+
+securinetsisgt{TUNISIA_TUNIS_06/2010}

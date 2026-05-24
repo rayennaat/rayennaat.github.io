@@ -1,7 +1,7 @@
 ---
-title: "Writeup: 3 Villains, Operation Defuse, and CA"
+title: "Writeup: 3 Villains, Operation Defuse, CA, and +35"
 published: 2026-05-24
-description: Three OSINT challenge writeups covering pop-culture map hunting, geolocation in Tunisia, and what3words with historical satellite imagery.
+description: Four OSINT challenge writeups covering pop-culture map hunting, geolocation, what3words with historical imagery, and identifying a Lake Como viewpoint.
 image: ./images/ctf1.jpg
 coverInPost: false
 tags: [CTF, OSINT, Geolocation, what3words, Google Maps, Google Earth]
@@ -10,11 +10,12 @@ draft: false
 pinned: false
 ---
 
-This post collects three OSINT challenges:
+This post collects four OSINT challenges:
 
 1. **3 Villains** - identifying three Batman villains from a hidden pop-culture reference.
 2. **Operation Defuse** - geolocating a photo in the Tunis / Carthage area.
 3. **CA** - using what3words and historical satellite imagery to identify a changed roof.
+4. **+35** - identifying a lakeside viewpoint from mountain silhouettes and shoreline features.
 
 ## 3 Villains
 
@@ -136,4 +137,52 @@ The first clear match appears in **06/2010**. The location is in **Tunisia**, in
 
 ```text
 securinetsisgt{TUNISIA_TUNIS_06/2010}
+```
+
+---
+
+## +35
+
+## Challenge Description
+
+The attached image shows Batman standing in front of a window and looking outside. Batman is not the useful clue here; the important details are in the landscape behind him:
+
+- A lake.
+- Mountains rising behind the water.
+- Small buildings along the opposite shore.
+
+![Original +35 challenge image](./images/osint/pic12.png)
+
+![Window view showing the lake and mountain clues](./images/osint/pic13.png)
+
+## Narrowing Down The Location
+
+The task title, **+35**, is the first hint. It resembles the beginning of an international phone code, suggesting a European location.
+
+The combination of a lake, steep surrounding mountains, and villages directly along the shore makes Italy a strong candidate. Among the best-known Italian lakes, **Lake Como** is an obvious place to investigate because its landscape closely matches the image.
+
+## Matching The View
+
+The next step is matching the mountains and shoreline. Google Maps imagery around Lake Como is especially useful here because boat-based Street View and photospheres provide the same kind of angle as the original image: looking across the water toward the opposite shore.
+
+By moving around the lake and comparing the mountain silhouettes, shoreline, and buildings, one view aligns closely with the challenge image.
+
+![Lake Como imagery used to compare the mountain shapes](./images/osint/pic14.png)
+
+By moving around the lake and comparing the mountain silhouettes, shoreline, and buildings, one view aligns closely with the challenge image.
+
+![Matching viewpoint across Lake Como](./images/osint/pic15.png)
+
+## Finding The Building
+
+Once the matching angle is identified, turning the view around reveals the building facing that exact section of the lake. This identifies the villa or building where the Batman photo was taken.
+
+![Building facing the matching viewpoint](./images/osint/pic16.png)
+
+![Intended location on the map](./images/osint/pic17.png)
+
+## Flag
+
+```text
+securinetsisgt{45.856_9.138}
 ```

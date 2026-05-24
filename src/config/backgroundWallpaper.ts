@@ -40,7 +40,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		/*desktop: [
 			"assets/images/DesktopWallpaper/d1.avif",
 			"assets/images/DesktopWallpaper/mine2.jpg",
-			"assets/images/DesktopWallpaper/mine3.jpg", cool
+			"assets/images/DesktopWallpaper/mine3.jpg", cool / 13 / 14 /16 /17/19/20/23
 			"assets/images/DesktopWallpaper/mine4.jpg",
 			"assets/images/DesktopWallpaper/mine5.jpg",
 			"assets/images/DesktopWallpaper/mine6.jpg",
@@ -50,12 +50,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"assets/images/MobileWallpaper/m1.avif",
-			"assets/images/MobileWallpaper/m2.avif",
-			"assets/images/MobileWallpaper/m3.avif",
-			"assets/images/MobileWallpaper/m4.avif",
-			"assets/images/MobileWallpaper/m5.avif",
-			"assets/images/MobileWallpaper/m6.avif",
+			"assets/images/MobileWallpaper/mine1.webp",
 		],
 	},
 	// Banner模式特有配置

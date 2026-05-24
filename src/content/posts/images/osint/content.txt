@@ -49,3 +49,34 @@ The first clear match appears in 06/2010. The location is in Tunisia, in the cit
 Final flag:
 
 securinetsisgt{TUNISIA_TUNIS_06/2010}
+
+Task4 
+
++35
+
+<pic12>
+<pic13>
+In the attached image, Batman is standing in front of a window, looking outside. The important details are not Batman himself, but the view behind him: a lake, mountains, and small buildings along the shore.
+
+The task title is +35, which is the first hint. It looks like a phone code clue, so the search starts with countries related to that kind of hint. Since the image shows a lake surrounded by mountains and the scenery looks European, Italy becomes a strong possibility.
+
+After that, the search goes toward famous Italian lakes. The most obvious one to check is Lake Como, because it is well known for exactly this kind of view: water, steep mountains, and villages built along the lake.
+
+Now the goal is to find mountains that match the ones in the image. For that, Google Maps is useful, especially the Street View/photosphere images taken from boats on Lake Como. Since the original photo is looking out across the water, boat imagery gives almost the same type of angle.
+
+So you move around Lake Como using those boat Street View images and compare the mountain shapes, the shoreline, and the villages in the background with the attached image.
+
+<pic14>
+
+After checking different parts of the lake, one view matches the image very closely. The mountain shape, the opposite shore, and the angle across the lake all line up.
+
+<pic15>
+
+From that matching point, you just turn the view around and check what building is facing that direction. That leads to the villa/building where the Batman photo was taken from.
+
+<pic16>
+The intended location :
+<pic17>
+
+The flag : securinetsisgt{45.856_9.138}
+

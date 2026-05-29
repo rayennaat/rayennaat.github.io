@@ -26,9 +26,13 @@ export function getPostUrlBySlug(slug: string): string {
 	return url(`/posts/${slugWithoutExt}/`);
 }
 
+export function getTagSlug(tag: string): string {
+	return getCategorySlug(tag);
+}
+
 export function getTagUrl(tag: string): string {
 	if (!tag) return url("/archive/");
-	return url(`/archive/?tag=${encodeURIComponent(tag.trim())}`);
+	return url(`/tag/${getTagSlug(tag)}/`);
 }
 
 export function getCategorySlug(category: string): string {

@@ -72,20 +72,10 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"Breaking systems. Building better ones.",
-				"Writeups, builds, and things I learned the hard way.",
-				"Security notes from the edge of curiosity.",
-				"Projects, payloads, and practical lessons.",
-				"Where code, security, and experiments collide.",
-				"Documenting the bugs, builds, and breakthroughs.",
 				"CTFs, web projects, and technical rabbit holes.",
-				"A field journal for code and cybersecurity.",
-				"Learning in public, one exploit and project at a time.",
-				"From portfolio builds to vulnerability hunts.",
-				"Notes from a cybersecurity student's terminal.",
-				"Web dev, security research, and occasional chaos.",
-				"Tracing bugs, shipping projects, writing it down.",
-				"A personal archive of builds, writeups, and lessons.",
+				"Breaking systems. Building better ones.",
+				"Where code, security, and experiments collide.",
+				"Writeups, builds, and things I learned the hard way.",
 				"Security writeups and software projects by Rayen Naat.",
 			],
 			// 主页横幅副标题字体大小

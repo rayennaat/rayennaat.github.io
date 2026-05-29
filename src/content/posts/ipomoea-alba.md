@@ -9,13 +9,13 @@ draft: false
 pinned: true
 ---
 
-This website may not be the most beautiful, the most advanced, or the most technically impressive, but it is the most precious one to me.
-
-> [!NOTE] Live Website
-> You can visit the project here: [Ipomoea alba](https://rayennaat.github.io/7chich/)
+> [!IMPORTANT] Personal Note
+> This website may not be the most beautiful, the most advanced, or the most technically impressive, but it is the most precious one to me.
 
 ![Ipomoea alba website preview](./images/ipomoea_pic2.png)
 
+> [!NOTE] Live Website
+> You can visit the project here: [Ipomoea alba](https://rayennaat.github.io/7chich/)
 ## The Flower Behind the Idea
 
 **Ipomoea alba**, commonly known as the **Moonflower**, is a beautiful night-blooming plant famous for its large white flowers and magical evening appearance.

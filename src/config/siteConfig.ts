@@ -54,12 +54,20 @@ export const siteConfig: SiteConfig = {
 	// Favicon 配置
 	favicon: [
 		{
-			// 图标文件路径
-			src: "/favicon/favicon.ico",
-			// 可选，指定主题 'light' | 'dark'
-			// theme: "light",
-			// 可选，图标大小
-			// sizes: "32x32",
+			src: "/favicon/hydra-32.png",
+			sizes: "32x32",
+		},
+		{
+			src: "/favicon/hydra-128.png",
+			sizes: "128x128",
+		},
+		{
+			src: "/favicon/hydra-180.png",
+			sizes: "180x180",
+		},
+		{
+			src: "/favicon/hydra-192.png",
+			sizes: "192x192",
 		},
 	],
 

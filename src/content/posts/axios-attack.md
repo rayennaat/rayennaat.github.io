@@ -6,7 +6,7 @@ image: ./images/axios.png
 tags: [Cybersecurity, Supply Chain, NPM, Article]
 category: Articles
 draft: false
-pinned: true
+pinned: false
 ---
 
 This article explores a fictional but highly realistic NPM supply-chain attack where a compromised Axios release turns a trusted dependency into an attack vector.

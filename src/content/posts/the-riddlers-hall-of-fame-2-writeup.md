@@ -6,7 +6,7 @@ image: ./images/riddler2/cover.png
 tags: [CTF, Web Security, Blind SQL Injection, Unicode]
 category: Writeups
 draft: false
-pinned: false
+pinned: true
 ---
 
 This writeup covers **The Riddler's Hall of Fame 2**, the second version of the same Batman-themed web challenge.

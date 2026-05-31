@@ -40,13 +40,21 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		/*desktop: [
 			"assets/images/DesktopWallpaper/d1.avif",
 			"assets/images/DesktopWallpaper/mine2.jpg",
-			"assets/images/DesktopWallpaper/mine3.jpg", cool / 13 / 14 /16 /17/19/20/23
+			"assets/images/DesktopWallpaper/mine3.jpg", cool / 13 /  /16 /17/20
 			"assets/images/DesktopWallpaper/mine4.jpg",
 			"assets/images/DesktopWallpaper/mine5.jpg",
 			"assets/images/DesktopWallpaper/mine6.jpg",
 			"assets/images/DesktopWallpaper/mine7.jpg",
 		],*/
-		desktop: "assets/images/DesktopWallpaper/d1.avif",
+		desktop: [
+			"assets/images/DesktopWallpaper/d1.avif",
+			"assets/images/DesktopWallpaper/mine3.jpg",
+			"assets/images/DesktopWallpaper/mine2.jpg",
+			"assets/images/DesktopWallpaper/mine13.webp",
+			"assets/images/DesktopWallpaper/mine16.jpg",
+			"assets/images/DesktopWallpaper/mine17.jpg",
+			"assets/images/DesktopWallpaper/mine20.png",
+		],
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
@@ -129,9 +137,9 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 开启轮播可能会有点奇怪，为了让图片之间的切换自然，图片会在下一张加载完成后，当前图片才会消失，所以会导致过渡有重影，可能会影响观感
 			// 目前还没有找到更好的过渡效果方案，所以如果你觉得轮播切换时的过渡效果不好，可以考虑关闭轮播，保持每次刷新随机显示一张图片
 			// 反正我目前不是很满意这个过渡效果，所以默认关闭了，如果你有更好的过渡效果方案，欢迎提交PR改进这个功能
-			enable: false,
+			enable: true,
 			// 轮播切换间隔（毫秒）
-			interval: 5000,
+			interval: 10000,
 			// 是否允许用户通过控制面板切换横幅轮播
 			switchable: false,
 		},

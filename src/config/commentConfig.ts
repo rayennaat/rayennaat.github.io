@@ -44,7 +44,7 @@ export const commentConfig: CommentConfig = {
 	//giscus评论系统配置
 	giscus: {
 		// 设置 Giscus 评论系统仓库
-		repo: "rayennaat/H1ydra_blog",
+		repo: "rayennaat/rayennaat.github.io",
 		// 设置 Giscus 评论系统仓库ID
 		repoId: "R_kgDOSRBJMg",
 		// 设置 Giscus 评论系统分类

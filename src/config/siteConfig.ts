@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "Demo site",
 
 	// 站点 URL
-	site_url: "https://rayennaat.github.io/H1ydra_blog",
+	site_url: "https://rayennaat.github.io",
 
 	// 站点描述
 	description:

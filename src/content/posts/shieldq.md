@@ -14,7 +14,7 @@ ShieldQ is a startup-style website built around one idea: modern web apps should
 It combines Quality Assurance and Cybersecurity into one clean brand experience, using a dark interface, blue gradient accents, and a professional layout to make the startup feel serious and trustworthy.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [ShieldQ](https://dulcet-bavarois-2f6af4.netlify.app/)
+> You can visit the project here: <a href="https://dulcet-bavarois-2f6af4.netlify.app/" target="_blank" rel="noopener noreferrer">ShieldQ</a>
 
 ![ShieldQ startup website homepage](./images/shieldq_pic1.png)
 

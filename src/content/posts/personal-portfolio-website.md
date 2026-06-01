@@ -14,7 +14,7 @@ This project is a responsive personal portfolio website built to showcase my wor
 It includes a hero section, about section, toolkit and skills area, project cards, and a contact form, all organized in a smooth single-page layout.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [Personal Portfolio Website](https://rayennaat.github.io/Portfolio/)
+> You can visit the project here: <a href="https://rayennaat.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">Personal Portfolio Website</a>
 
 
 ## Frontend Structure

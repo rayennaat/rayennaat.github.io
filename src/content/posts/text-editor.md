@@ -14,7 +14,7 @@ This project is a modern web-based text editor that allows users to create and f
 It supports common writing tools like bold text, italic text, underline, colors, alignment, and lists, while also providing more advanced content features for real web applications.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [Modern Web-Based Text Editor](https://text-editor-by5j.onrender.com/)
+> You can visit the project here: <a href="https://text-editor-by5j.onrender.com/" target="_blank" rel="noopener noreferrer">Modern Web-Based Text Editor</a>
 
 ![Modern web-based text editor interface](./images/text_editor/pic1.png)
 

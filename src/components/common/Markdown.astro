@@ -10,3 +10,18 @@ const className = Astro.props.class;
 <div data-pagefind-body class={`prose dark:prose-invert prose-base max-w-none! custom-md ${className}`}>
     <slot/>
 </div>
+<script>
+	function initMarkdownExternalLinks() {
+		document
+			.querySelectorAll(".custom-md a[href^='http://'], .custom-md a[href^='https://']")
+			.forEach((link) => {
+				link.setAttribute("target", "_blank");
+				link.setAttribute("rel", "noopener noreferrer");
+			});
+	}
+
+	initMarkdownExternalLinks();
+	document.addEventListener("DOMContentLoaded", initMarkdownExternalLinks);
+	document.addEventListener("astro:page-load", initMarkdownExternalLinks);
+	document.addEventListener("swup:contentReplaced", initMarkdownExternalLinks);
+</script>

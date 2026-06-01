@@ -15,7 +15,7 @@ SQL Injection Demo is a hands-on educational platform that simulates real SQL in
 The project was built to bridge the gap between theoretical vulnerability research and practical exploitation. It is directly inspired by Elshazly et al.'s survey on SQLIA detection and prevention, and it reproduces their proposed TDS Proxy filtering architecture as a working implementation.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [SQL Injection Demo](https://sql-injection-demo-50wa.onrender.com/)
+> You can visit the project here: <a href="https://sql-injection-demo-50wa.onrender.com/" target="_blank" rel="noopener noreferrer">SQL Injection Demo</a>
 
 ![SQL Injection Demo attack and defense interface](./images/sql/pic1.png)
 

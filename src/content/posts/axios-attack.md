@@ -16,6 +16,6 @@ It breaks down how a stolen token, a malicious dependency, and an automatic post
 The piece highlights the fragile trust behind modern open-source ecosystems and why practices like lockfiles, token rotation, and secure publishing workflows matter.
 
 > [!NOTE] Demo
-> You can read the demo here: [The Axios Attack](https://rayennaat.github.io/axios-attack/)
+> You can read the demo here: <a href="https://rayennaat.github.io/axios-attack/" target="_blank" rel="noopener noreferrer">The Axios Attack</a>
 
 ![The Axios Attack article preview](./images/axios2.png)

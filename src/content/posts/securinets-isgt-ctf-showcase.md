@@ -14,7 +14,7 @@ Securinets ISGT CTF is a dark, cyber-themed showcase website created to promote 
 The website acts like a vitrine for the event, giving visitors a clear overview of the CTF, its atmosphere, challenge categories, sponsors, and the main information participants need before joining.
 
 > [!NOTE] Live Demo
-> You can visit the website here: [Securinets ISGT CTF](https://rayennaat.github.io/)
+> You can visit the website here: <a href="https://rayennaat.github.io/" target="_blank" rel="noopener noreferrer">Securinets ISGT CTF</a>
 
 ![Securinets ISGT CTF cyber-themed hero section](./images/ctf/pic1.png)
 

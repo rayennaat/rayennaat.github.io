@@ -22,27 +22,27 @@ export const profileConfig: ProfileConfig = {
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
 		{
-			name: "qq",
-			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/q/ZGsFa8qX2G",
+			name: "Instagram",
+			icon: "fa7-brands:instagram",
+			url: "https://www.instagram.com/its.h1ydra.btw/",
 			showName: false,
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/CuteLeaf",
+			url: "https://github.com/rayennaat",
 			showName: false,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "mailto:xiaye@msn.com",
+			url: "mailto:rayen.enaate@gmail.com",
 			showName: false,
 		},
 		{
-			name: "RSS",
-			icon: "fa7-solid:rss",
-			url: "/rss/",
+			name: "LinkedIn",
+			icon: "fa7-brands:linkedin",
+			url: "https://www.linkedin.com/in/rayennaat/",
 			showName: false,
 		},
 	],

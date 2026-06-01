@@ -14,7 +14,7 @@ ChainLab is a React web app designed to introduce blockchain and Web3 concepts i
 Instead of presenting blockchain as something complicated or intimidating, the website uses a dark futuristic interface, smooth animations, and 3D visuals to make the experience more engaging.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [ChainLab](https://chainbl0ck.netlify.app/)
+> You can visit the project here: <a href="https://chainbl0ck.netlify.app/" target="_blank" rel="noopener noreferrer">ChainLab</a>
 
 The homepage presents the idea of decentralization with a strong visual identity, using a 3D chain model to represent connection, trust, and the future of blockchain technology.
 

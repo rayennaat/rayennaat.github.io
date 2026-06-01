@@ -14,7 +14,7 @@ SecureQA is a professional vitrine website designed for an AI-powered quality as
 The website presents the product through a modern SaaS landing page structure, starting with a strong hero section that explains the main idea: using artificial intelligence to improve software testing, predict risks, detect bugs, and strengthen application security.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [SecureQA](https://rayennaat.github.io/Vetrine/)
+> You can visit the project here: <a href="https://rayennaat.github.io/Vetrine/" target="_blank" rel="noopener noreferrer">SecureQA</a>
 
 
 ## AI Testing and Security Features

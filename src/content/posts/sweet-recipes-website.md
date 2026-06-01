@@ -14,7 +14,7 @@ Sweet Recipes is a cute and user-friendly recipe viewer website designed to disp
 The project uses a soft pink theme, image-based recipe cards, and simple category filters to make browsing recipes feel clean and enjoyable.
 
 > [!NOTE] Live Demo
-> You can visit the project here: [Sweet Recipes](https://rayennaat.github.io/sweet-recipes)
+> You can visit the project here: <a href="https://rayennaat.github.io/sweet-recipes" target="_blank" rel="noopener noreferrer">Sweet Recipes</a>
 
 ## Recipe Browsing
 

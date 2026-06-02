@@ -16,6 +16,12 @@ The website acts like a vitrine for the event, giving visitors a clear overview 
 > [!NOTE] Live Demo
 > You can visit the website here: <a href="https://rayennaat.github.io/" target="_blank" rel="noopener noreferrer">Securinets ISGT CTF</a>
 
+## Technologies Used
+
+- React
+- JavaScript
+- Tailwind CSS
+
 ![Securinets ISGT CTF cyber-themed hero section](./images/ctf/pic1.png)
 
 ## Cyber Event Identity

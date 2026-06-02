@@ -16,6 +16,13 @@ Instead of presenting blockchain as something complicated or intimidating, the w
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://chainbl0ck.netlify.app/" target="_blank" rel="noopener noreferrer">ChainLab</a>
 
+## Technologies Used
+
+- Spline
+- React
+- JavaScript
+- Tailwind CSS
+
 The homepage presents the idea of decentralization with a strong visual identity, using a 3D chain model to represent connection, trust, and the future of blockchain technology.
 
 ![ChainLab homepage with 3D blockchain visual](./images/chainlab_pic1.png)

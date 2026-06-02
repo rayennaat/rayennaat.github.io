@@ -30,7 +30,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	links.push({
 		name: "Other",
-		url: "/my/",
+		url: "#",
 		icon: "material-symbols:apps",
 		children: [
 			...(siteConfig.pages.anime
@@ -62,7 +62,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	links.push({
 		name: "Links",
-		url: "/links/",
+		url: "#",
 		icon: "material-symbols:link",
 
 		// 子菜单

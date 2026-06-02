@@ -16,6 +16,12 @@ It combines Quality Assurance and Cybersecurity into one clean brand experience,
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://dulcet-bavarois-2f6af4.netlify.app/" target="_blank" rel="noopener noreferrer">ShieldQ</a>
 
+## Technologies Used
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+
 ![ShieldQ startup website homepage](./images/shieldq_pic1.png)
 
 ## Quality and Security Together

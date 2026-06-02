@@ -16,6 +16,12 @@ The project uses a soft pink theme, image-based recipe cards, and simple categor
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://rayennaat.github.io/sweet-recipes" target="_blank" rel="noopener noreferrer">Sweet Recipes</a>
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
 ## Recipe Browsing
 
 The website lets users explore different sweet recipes through categories such as cakes, cookies, and drinks.

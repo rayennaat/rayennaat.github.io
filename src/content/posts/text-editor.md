@@ -16,6 +16,12 @@ It supports common writing tools like bold text, italic text, underline, colors,
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://text-editor-by5j.onrender.com/" target="_blank" rel="noopener noreferrer">Modern Web-Based Text Editor</a>
 
+## Technologies Used
+
+- React
+- JavaScript
+- Tailwind CSS
+
 ![Modern web-based text editor interface](./images/text_editor/pic1.png)
 
 ## Rich Content Editing

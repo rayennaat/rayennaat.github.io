@@ -16,6 +16,11 @@ It includes a hero section, about section, toolkit and skills area, project card
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://rayennaat.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">Personal Portfolio Website</a>
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
 
 ## Frontend Structure
 

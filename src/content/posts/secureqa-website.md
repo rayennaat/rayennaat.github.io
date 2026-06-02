@@ -16,6 +16,11 @@ The website presents the product through a modern SaaS landing page structure, s
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://rayennaat.github.io/Vetrine/" target="_blank" rel="noopener noreferrer">SecureQA</a>
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
 
 ## AI Testing and Security Features
 

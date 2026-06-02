@@ -2,7 +2,7 @@
 title: "SQL Injection Demo: Attack and Defense"
 published: 2026-05-29
 description: A hands-on educational platform that demonstrates real SQL injection attacks and a proxy-style defense filter against a live Flask and SQLite application.
-image: ./images/sql/pic1.png
+image: ./images/sql/cover.png
 coverInPost: false
 tags: [My Work, Cybersecurity, SQL Injection, Flask, SQLite]
 category: Websites
@@ -16,6 +16,13 @@ The project was built to bridge the gap between theoretical vulnerability resear
 
 > [!NOTE] Live Demo
 > You can visit the project here: <a href="https://sql-injection-demo-50wa.onrender.com/" target="_blank" rel="noopener noreferrer">SQL Injection Demo</a>
+
+## Technologies Used
+
+- Python
+- Flask
+- SQLite
+- JavaScript
 
 ![SQL Injection Demo attack and defense interface](./images/sql/pic1.png)
 
@@ -53,9 +60,5 @@ When enabled, regex patterns are matched against known injection signatures. Mal
 
 > [!WARNING] Database Reset
 > Some payloads can demonstrate destructive behavior, including `DROP TABLE`. After dropping the table, you can reset the database here: [Reset Database](https://sql-injection-demo-50wa.onrender.com/api/reset-db)
-
-## Tech Stack
-
-The project is built with Python, Flask, SQLite, HTML, CSS, and Vanilla JavaScript, and it is deployed on Render.
 
 Overall, SQL Injection Demo is a practical security learning tool because it combines vulnerable application behavior, live exploitation, query monitoring, and a working defensive filter in one complete web project.

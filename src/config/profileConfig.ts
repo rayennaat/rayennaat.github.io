@@ -28,9 +28,9 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
-			name: "GitHub",
-			icon: "fa7-brands:github",
-			url: "https://github.com/rayennaat",
+			name: "Dribbble",
+			icon: "fa7-brands:dribbble",
+			url: "https://dribbble.com/rayen_naat",
 			showName: false,
 		},
 		{
@@ -40,9 +40,9 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
-			name: "LinkedIn",
-			icon: "fa7-brands:linkedin",
-			url: "https://www.linkedin.com/in/rayennaat/",
+			name: "Ko-fi",
+			icon: "simple-icons:kofi",
+			url: "https://ko-fi.com/rayen_naat",
 			showName: false,
 		},
 	],

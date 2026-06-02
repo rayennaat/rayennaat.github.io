@@ -420,11 +420,12 @@ const bannerCarouselInterval = Math.max(
             rememberInitialFrame('banner-image-slot-mobile');
             rememberInitialFrame('banner-image-slot-desktop');
 
-            // F5 刷新重置，Swup 切换保留
+            // Always start from the first configured image on a fresh visit.
+            // The carousel still advances through the rest of the images after startup.
             if (typeof window.__bannerRandomIndex === 'undefined') {
                 window.__bannerRandomIndex = {
-                    mobile: mobileCount > 1 ? Math.floor(Math.random() * mobileCount) : 0,
-                    desktop: desktopCount > 1 ? Math.floor(Math.random() * desktopCount) : 0
+                    mobile: 0,
+                    desktop: 0
                 };
             }
 

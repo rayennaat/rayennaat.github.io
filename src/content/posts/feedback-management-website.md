@@ -14,6 +14,9 @@ Feedback Management Website is a full web app built around collecting, displayin
 
 The project includes a public landing page, an authentication screen, a user-facing feedback board, a personal feedback tracking tab, and an admin dashboard for moderation. Together, these pages make the app feel like a complete product instead of only a simple form or static interface.
 
+> [!NOTE] Live Demo
+> You can visit the project here: <a href="https://feedback-board-rxyk.vercel.app/" target="_blank" rel="noopener noreferrer">Feedback Management Website</a>
+
 ## Technologies Used
 
 - React

@@ -54,19 +54,19 @@ export const siteConfig: SiteConfig = {
 	// Favicon 配置
 	favicon: [
 		{
-			src: "/favicon/hydra-32.png",
+			src: "/favicon/meow-rounded.png",
 			sizes: "32x32",
 		},
 		{
-			src: "/favicon/hydra-128.png",
+			src: "/favicon/meow-rounded.png",
 			sizes: "128x128",
 		},
 		{
-			src: "/favicon/hydra-180.png",
+			src: "/favicon/meow-rounded.png",
 			sizes: "180x180",
 		},
 		{
-			src: "/favicon/hydra-192.png",
+			src: "/favicon/meow-rounded.png",
 			sizes: "192x192",
 		},
 	],
